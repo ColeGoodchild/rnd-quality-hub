@@ -21,7 +21,7 @@ const About = () => {
             </div>
             <h3 className="font-serif text-xl font-bold text-foreground mb-4">Mission Statement</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Providing consulting, training, and internal auditing services for the very best value. We are committed to helping organizations achieve and maintain excellence in quality management.
+              Providing consulting, training, and internal auditing services for the very best value. We are committed to helping organizations achieve and maintain excellence in quality and business systems.
             </p>
           </div>
 
