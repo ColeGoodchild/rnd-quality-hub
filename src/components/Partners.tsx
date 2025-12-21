@@ -19,8 +19,13 @@ const partners = [
   },
   {
     name: "CI Consulting Services",
-    description: "Continuous improvement consulting",
+    description: "Continuous improvement consulting.",
     url: "https://ciconsultingservices.com/",
+  },
+  {
+    name: "RL Quality Management Services",
+    description: "Creating a QMS that fits your company's needs—no more, no less. In Binghamton, serving the Southern Tier and Northern PA.",
+    url: "https://rl-qms.com/",
   },
 ];
 
