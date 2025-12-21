@@ -8,8 +8,8 @@ const partners = [
   },
   {
     name: "Innovative Quality Services",
-    description: "Quality Auditing & Management Systems",
-    url: null,
+    description: "Quality Auditing & Management Systems. Located in Syracuse, serving Central New York.",
+    url: "https://www.innovativequalityservices.com",
   },
   {
     name: "TDO & DLS Quality Management",
