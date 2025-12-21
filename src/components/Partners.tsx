@@ -3,7 +3,7 @@ import { ExternalLink, Handshake } from "lucide-react";
 const partners = [
   {
     name: "Quality Systems Services",
-    description: "Quality management consulting and system development",
+    description: "Quality management consulting and system development. Located in Binghamton, serving the Southern Tier and Northern PA.",
     url: null,
   },
   {
