@@ -15,7 +15,7 @@ const services = [
   {
     icon: Settings,
     title: "QMS Development",
-    description: "Complete quality management system development and improvement services, from initial design to full implementation.",
+    description: "Complete quality and business management system development and improvement services, from initial design to full implementation.",
   },
   {
     icon: TrendingUp,
