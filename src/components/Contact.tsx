@@ -1,7 +1,48 @@
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { useState } from "react";
+import { Mail, Phone, Clock } from "lucide-react";
 import { Button } from "./ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://usebasin.com/f/aefe40d5a47a", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Thank you for your message!",
+          description: "We'll get back to you within 48 hours.",
+        });
+        form.reset();
+      } else {
+        toast({
+          title: "Something went wrong",
+          description: "Please try again or contact us directly.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <section id="contact" className="py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -71,9 +112,7 @@ const Contact = () => {
               Send Us a Message
             </h3>
             <form 
-              action="https://usebasin.com/f/aefe40d5a47a" 
-              method="POST" 
-              encType="multipart/form-data"
+              onSubmit={handleSubmit}
               className="space-y-5"
             >
               <div className="grid sm:grid-cols-2 gap-4">
@@ -145,8 +184,8 @@ const Contact = () => {
                   placeholder="Tell us about your quality management needs..."
                 />
               </div>
-              <Button type="submit" variant="gold" size="lg" className="w-full">
-                Send Message
+              <Button type="submit" variant="gold" size="lg" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
