@@ -70,7 +70,12 @@ const Contact = () => {
             <h3 className="font-serif text-xl font-bold text-foreground mb-6">
               Send Us a Message
             </h3>
-            <form className="space-y-5">
+            <form 
+              action="https://usebasin.com/f/aefe40d5a47a" 
+              method="POST" 
+              encType="multipart/form-data"
+              className="space-y-5"
+            >
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -79,6 +84,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
                     placeholder="John Smith"
                   />
@@ -90,6 +96,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="company"
+                    name="company"
                     className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
                     placeholder="Your Company"
                   />
@@ -102,6 +109,8 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  required
                   className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
                   placeholder="john@company.com"
                 />
@@ -112,6 +121,7 @@ const Contact = () => {
                 </label>
                 <select
                   id="service"
+                  name="service"
                   className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
                 >
                   <option value="">Select a service</option>
@@ -129,12 +139,13 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors resize-none"
                   placeholder="Tell us about your quality management needs..."
                 />
               </div>
-              <Button variant="gold" size="lg" className="w-full">
+              <Button type="submit" variant="gold" size="lg" className="w-full">
                 Send Message
               </Button>
             </form>
