@@ -53,7 +53,11 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
-            <Button variant="hero" size="sm">
+            <Button 
+              variant="hero" 
+              size="sm"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Get a Quote
             </Button>
           </div>
@@ -82,7 +86,15 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="sm" className="mt-2 w-full">
+              <Button 
+                variant="hero" 
+                size="sm" 
+                className="mt-2 w-full"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Get a Quote
               </Button>
             </div>
