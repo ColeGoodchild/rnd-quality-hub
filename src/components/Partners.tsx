@@ -13,7 +13,7 @@ const partners = [
   },
   {
     name: "TDO & DLS Quality Management",
-    description: "Comprehensive quality management solutions. In Philadelphia, serving the Mid-Atlantic and NYC area.",
+    description: "Continuous improvement consulting. QMS Certification also available.",
     url: "https://tdo.org/",
     secondaryUrl: "https://dlsqual.com/about-dls/",
   },
