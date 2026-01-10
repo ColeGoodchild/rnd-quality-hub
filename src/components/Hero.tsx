@@ -49,7 +49,11 @@ const Hero = () => {
             >
               Our Services
             </Button>
-            <Button variant="heroOutline" size="xl">
+            <Button 
+              variant="heroOutline" 
+              size="xl"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Contact Us
             </Button>
           </div>
