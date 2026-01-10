@@ -19,7 +19,7 @@ const partners = [
   },
   {
     name: "CI Consulting Services",
-    description: "Continuous improvement consulting.",
+    description: "Comprehensive quality management solutions. In Philadelphia, serving the Mid-Atlantic and NYC area.",
     url: "https://ciconsultingservices.com/",
   },
   {
