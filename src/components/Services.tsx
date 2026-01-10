@@ -5,7 +5,7 @@ const services = [
   {
     icon: ClipboardCheck,
     title: "Internal Auditing",
-    description: "Comprehensive internal audit services for ISO 9001, AS 9100, and TI 16485 standards to ensure compliance and identify improvement opportunities.",
+    description: "Comprehensive internal audit services for ISO 9001, AS 9100, and IATF 16949 standards to ensure compliance and identify improvement opportunities.",
   },
   {
     icon: BookOpen,
